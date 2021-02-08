@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    
+    
+    <changeSet id="07.02.2020-10:32" author="can.okan">
+        <createTable tableName="Hospital">
+            <column autoIncrement="true" name="id" type="int(10)" >
+                <constraints primaryKey="true"></constraints>
+            </column>
+            <column name="name" type="VARCHAR(255)"></column>
+            
+             <column name="licanse_Plate" type="int(10)">
+             <constraints  foreignKeyName="fk_hospital_province" referencedColumnNames="Province(licansePlate)" />
+             </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="07.02.2020-10:40" author="can.okan">
+        <insert tableName="Hospital">
+             <column name="id" valueNumeric="1"></column>
+             <column name="name" value="Kartal Araştırma Hastanesi"></column>
+             <column name="licanse_Plate" valueNumeric="34"/>
+        </insert>      
+       
+    </changeSet>
+   
+    
+    </databaseChangeLog>
+    
