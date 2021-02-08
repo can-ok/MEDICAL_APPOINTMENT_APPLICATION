@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    
+    
+    <changeSet id="07.02.2020-00:00" author="can.okan">
+        <createTable tableName="TBL_HOSPITAL_POLICLINIC">
+            <column autoIncrement="true" name="id" type="int(10)" >
+                <constraints primaryKey="true"></constraints>
+            </column>
+            <column name="hospital_id" type="int(10)" >
+                <constraints nullable="false" foreignKeyName="fk_hospital" references="Hospital(id)"/>
+            </column>
+
+        <column name="policlinic_id" type="int(10)">
+                <constraints nullable="false" foreignKeyName="fk_policlinic" references="policlinic(id)"/>
+            </column>
+            
+        </createTable>
+    </changeSet>
+    
+    
+       
+    </databaseChangeLog>
+    

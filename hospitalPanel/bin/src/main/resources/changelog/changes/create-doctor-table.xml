@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    
+    
+    <changeSet id="06.02.2020-00:06" author="can.okan">
+        <createTable tableName="doctor">
+            <column autoIncrement="true" name="registrationNumber" type="int(10)" >
+                <constraints primaryKey="true"></constraints>
+            </column>
+            <column name="name" type="VARCHAR(255)"></column>
+            <column name="surname" type="VARCHAR(255)"></column>
+            
+            <column name="policlinicId" type="int(10)">
+            	<constraints foreignKeyName="fk_polic_doctor" referencedColumnNames="policlinic(id)"></constraints>
+            </column>
+             
+        </createTable>
+    </changeSet>
+    
+    
+      <changeSet id="06.02.2020-06" author="can.okan">
+        <insert tableName="doctor">
+            <column name="registrationNumber" valueNumeric="11235"></column>
+            <column name="name" value="Hakan"></column>
+           <column name="surname" value="Mert"></column>
+           <column name="policlinicId" valueNumeric="1"/>
+           
+        </insert>      
+       
+    </changeSet>
+    
+    
+    <changeSet id="08.02.2020-08:00" author="can.okan">
+    	<addColumn tableName="doctor">
+    		 <column name="hospitalId" type="int(10)">
+            	<constraints foreignKeyName="fk_hospital_doctor" referencedColumnNames="Hospital(id)"></constraints>
+            </column>
+    	</addColumn>
+    
+    </changeSet>
+    
+    </databaseChangeLog>
+    

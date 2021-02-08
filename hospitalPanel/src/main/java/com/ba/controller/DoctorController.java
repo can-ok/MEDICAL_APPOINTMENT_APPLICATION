@@ -35,12 +35,12 @@ public class DoctorController {
 		return doctorService.insertDoctor(dto);
 	}
 	
-	@GetMapping
+	@GetMapping(path = "/find")
 	public List<Doctor> getDoctorsByPoliclinicAndHospital
 	(@RequestParam(value="policlinic") Integer policlinicId,
 			@RequestParam(value="hospital") Integer hospitalId){
 		
-		return null;
+		return doctorService.findDoctorsByParams(policlinicId, hospitalId);
 
 	}
 	

@@ -1,6 +1,7 @@
 package com.ba.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -35,8 +36,8 @@ public class DoctorService {
 	
 	public List<Doctor> findDoctorsByParams(Integer policlinicId,Integer hospitalId){
 		
-		
-		return null;
+		List<Doctor> doc=doctorRepository.findDoctorByParams(hospitalId,policlinicId);
+		return doc;
 	}
 
 }
