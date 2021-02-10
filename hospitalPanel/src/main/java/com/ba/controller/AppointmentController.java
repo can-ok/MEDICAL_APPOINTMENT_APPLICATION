@@ -10,26 +10,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ba.dto.ProvinceDto;
-import com.ba.entity.Province;
-import com.ba.service.ProvinceService;
+import com.ba.dto.AppointmentDto;
+import com.ba.entity.Appointment;
+import com.ba.service.AppointmentService;
 
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3006"})
 @RestController
-@RequestMapping("/provinces")
-public class ProvinceController {
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3006"})
+@RequestMapping("/appointment")
+public class AppointmentController {
 	
 	@Autowired
-	ProvinceService provinceService;
+	AppointmentService appointmentService;
 	
 	@GetMapping
-	public List<Province> getAllProvinces(){
-		return provinceService.getAllProvinces();
+	public List<Appointment> getAppointments(){
+		return appointmentService.getAll();
 	}
+	
 	
 	@PostMapping
-	public String saveProvince(@RequestBody ProvinceDto provinceDto) {
-		return provinceService.insertProvince(provinceDto);
+	public String saveAppointment(@RequestBody AppointmentDto appointmentDto)
+	{
+		return appointmentService.insertAppointment(appointmentDto);
 	}
-	
+
 }
