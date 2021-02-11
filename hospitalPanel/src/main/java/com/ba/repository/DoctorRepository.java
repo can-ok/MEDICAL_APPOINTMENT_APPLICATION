@@ -15,4 +15,7 @@ public interface DoctorRepository extends JpaRepository<Doctor, Integer>{
 	@Query("Select d from Doctor d where d.hospital.id=:hid AND d.policlinic.id=:pid")
 	List<Doctor> findDoctorByParams(Integer hid,Integer pid);
 	
+	
+	Doctor findByRegistrationNumber(Integer registrationNumber);
+
 }

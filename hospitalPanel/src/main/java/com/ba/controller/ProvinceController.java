@@ -14,10 +14,9 @@ import com.ba.dto.ProvinceDto;
 import com.ba.entity.Province;
 import com.ba.service.ProvinceService;
 
-
 @CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3006"})
 @RestController
-@RequestMapping(path="/provinces")
+@RequestMapping("/provinces")
 public class ProvinceController {
 	
 	@Autowired

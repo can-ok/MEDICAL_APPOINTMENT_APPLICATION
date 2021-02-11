@@ -9,6 +9,9 @@
         	<include file="/changelog/changes/create-province-table.xml"></include>
         	<include file="/changelog/changes/create-hospital-table.xml"></include>
             <include file="/changelog/changes/create-TBL_hospital_policlinic-table.xml"></include>
+            <include file="/changelog/changes/create-role-table.xml"></include>
+            <include file="/changelog/changes/create-patient-table.xml"></include>
+            <include file="/changelog/changes/create-appointment-table.xml"></include>
         
 </databaseChangeLog>
         

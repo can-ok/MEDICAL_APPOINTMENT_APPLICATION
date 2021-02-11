@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    
+    
+    <changeSet id="10.02.2020-10:15" author="can.okan">
+        <createTable tableName="appointment">
+            <column autoIncrement="true" name="id" type="int(10)" >
+                <constraints primaryKey="true"></constraints>
+            </column>
+            <column name="identityNumber" type="VARCHAR(255)"></column>
+            <column name="province" type="VARCHAR(255)"></column>
+            <column name="hospital" type="VARCHAR(255)"></column>
+            <column name="policlinc" type="VARCHAR(255)"></column>
+            
+            
+            <column name="date"  defaultValueComputed="CURRENT_TIMESTAMP" type="TIMESTAMP"/>
+            <column name="hour" type="VARCHAR(255)"></column>
+            
+            
+            <column name="doctorId" type="int(10)">
+            	<constraints foreignKeyName="fk_doctor_appointment" referencedColumnNames="doctor(id)"></constraints>
+            </column>
+             
+        </createTable>
+    </changeSet>
+    
+   
+    
+    
+  
+    
+    </databaseChangeLog>
+    
