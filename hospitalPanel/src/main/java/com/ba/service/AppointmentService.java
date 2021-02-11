@@ -1,5 +1,8 @@
 package com.ba.service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +35,16 @@ public class AppointmentService {
 	
 	public List<Appointment> getAll(){
 		return appointmentRepository.findAll();
+	}
+	
+	public List<Appointment> getAllByIdentityNumber(String identityNumber){
+		return appointmentRepository.findByidentityNumber(identityNumber);
+	}
+	
+	
+	public List<String> getReservedHours(String date){
+		
+		return appointmentRepository.getReservedHours(date);
 	}
 	
 }

@@ -22,7 +22,7 @@ public class AppointmentDto {
 	
 	private Doctor doctor;
 	
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-mm-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date date;
 	
 	private String hour;
