@@ -42,9 +42,9 @@ public class AppointmentService {
 	}
 	
 	
-	public List<String> getReservedHours(String date){
+	public List<String> getReservedHours(String date,Integer registrationNumber){
 		
-		return appointmentRepository.getReservedHours(date);
+		return appointmentRepository.getReservedHours(date,registrationNumber);
 	}
 	
 }

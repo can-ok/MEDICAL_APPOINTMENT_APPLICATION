@@ -43,7 +43,7 @@ public class AppointmentController {
 	}
 	
 	@GetMapping(path="/reserved")
-	public List<String> getReserves(@RequestParam(value="date") String date){
-		return appointmentService.getReservedHours(date);
+	public List<String> getReserves(@RequestParam(value="date") String date,@RequestParam(value="id") Integer registrationNumber){
+		return appointmentService.getReservedHours(date,registrationNumber);
 	}
 }

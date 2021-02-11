@@ -15,8 +15,8 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Intege
 	
 	List<Appointment> findByidentityNumber(String identityNumber);
 	
-	@Query("Select a.hour from Appointment a where a.date LIKE  CONCAT(:date,'%') ")
-	List<String> getReservedHours(String date);
+	@Query("Select a.hour from Appointment a where a.date LIKE  CONCAT(:date,'%') AND  a.doctor.registrationNumber=:registrationNumber")
+	List<String> getReservedHours(String date,Integer registrationNumber);
 	
 	List<Appointment> findByDate(Date date);
 }
