@@ -3,6 +3,7 @@ package com.ba.dto;
 
 import com.ba.entity.Hospital;
 import com.ba.entity.Policlinic;
+import com.ba.entity.Role;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,7 +25,11 @@ public class DoctorDto {
 
 	private PoliclinicDto policlinic;
 	
+	private String password;
+
 	private Hospital hospital;
+	
+	private Role role;
 
 
 }

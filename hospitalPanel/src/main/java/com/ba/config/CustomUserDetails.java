@@ -10,6 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.ba.entity.Doctor;
 import com.ba.entity.Patient;
 
 
@@ -25,6 +26,15 @@ public class CustomUserDetails implements UserDetails{
 		c.identityNumber=patient.getIdentityNumber();
 		c.password=patient.getPassword();
 		c.grantedAuth=Collections.singletonList(new SimpleGrantedAuthority(patient.getRole().getName()));
+		return c;
+	}
+	
+	public static CustomUserDetails fromDoctorEntityToCustomUserDetails(Doctor doctor)
+	{
+		CustomUserDetails c=new CustomUserDetails();
+		c.identityNumber= String.valueOf(doctor.getRegistrationNumber());
+		c.password=doctor.getPassword();
+		c.grantedAuth=Collections.singletonList(new SimpleGrantedAuthority(doctor.getRole().getName()));
 		return c;
 	}
 	

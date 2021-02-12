@@ -47,4 +47,9 @@ public class AppointmentService {
 		return appointmentRepository.getReservedHours(date,registrationNumber);
 	}
 	
+	public List<Appointment> getAllByDoctor(Integer registrationNumber){
+		Doctor doctor=doctorRepository.findByRegistrationNumber(registrationNumber);
+		return appointmentRepository.findByDoctor(doctor);
+	}
+	
 }

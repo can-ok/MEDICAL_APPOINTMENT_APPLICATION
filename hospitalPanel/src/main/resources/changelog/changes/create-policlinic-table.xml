@@ -8,7 +8,7 @@
     
 
         
-    <changeSet id="06.02.2020-00:10" author="can.okan">
+    <changeSet id="21.02.2020-00:10" author="can.okan">
         <createTable tableName="policlinic">
             <column autoIncrement="true" name="id" type="int(10)" >
                 <constraints primaryKey="true"></constraints>
@@ -19,7 +19,7 @@
         </createTable>
     </changeSet>
     
-    <changeSet id="06.02.2020-00:11" author="can.okan">
+    <changeSet id="21.02.2020-00:11" author="can.okan">
         <insert tableName="policlinic">
             <column name="id" valueNumeric="1"></column>
             <column name="name" value="Surgical"></column>

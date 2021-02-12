@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.ba.entity.Appointment;
+import com.ba.entity.Doctor;
 import com.ba.entity.Role;
 
 @Repository
@@ -19,4 +20,6 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Intege
 	List<String> getReservedHours(String date,Integer registrationNumber);
 	
 	List<Appointment> findByDate(Date date);
+	
+	List<Appointment> findByDoctor(Doctor doctor);
 }

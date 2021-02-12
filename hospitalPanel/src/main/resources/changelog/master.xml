@@ -3,15 +3,14 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-				
+        	<!--  <include file="/changelog/changes/create-province-table.xml"></include>
+        	<include file="/changelog/changes/create-hospital-table.xml"></include>	
 			<include file="/changelog/changes/create-policlinic-table.xml"></include>
+			<include file="/changelog/changes/create-role-table.xml"></include>
+            <include file="/changelog/changes/create-TBL_hospital_policlinic-table.xml"></include>			
 		    <include file="/changelog/changes/create-doctor-table.xml"></include>
-        	<include file="/changelog/changes/create-province-table.xml"></include>
-        	<include file="/changelog/changes/create-hospital-table.xml"></include>
-            <include file="/changelog/changes/create-TBL_hospital_policlinic-table.xml"></include>
-            <include file="/changelog/changes/create-role-table.xml"></include>
             <include file="/changelog/changes/create-patient-table.xml"></include>
             <include file="/changelog/changes/create-appointment-table.xml"></include>
-        
+       -->
 </databaseChangeLog>
         

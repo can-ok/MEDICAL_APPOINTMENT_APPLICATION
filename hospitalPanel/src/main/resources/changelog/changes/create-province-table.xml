@@ -7,7 +7,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     
     
-    <changeSet id="07.02.2020-10:30" author="can.okan">
+    <changeSet id="11.02.2020-10:30" author="can.okan">
         <createTable tableName="Province">
             <column autoIncrement="true" name="licansePlate" type="int(10)" >
                 <constraints primaryKey="true"></constraints>
@@ -18,7 +18,7 @@
     </changeSet>
     
     
-      <changeSet id="07.02.2020-10:31" author="can.okan">
+      <changeSet id="21.02.2020-10:31" author="can.okan">
         <insert tableName="Province">
              <column name="licansePlate" valueNumeric="34"></column>
              <column name="name" value="İstanbul"></column>
@@ -27,7 +27,7 @@
    	
    	
    	 
-    <changeSet id="07.02.2020-10:35" author="can.okan">
+    <changeSet id="21.02.2020-10:35" author="can.okan">
         <insert tableName="Province">
              <column name="licansePlate" valueNumeric="06"></column>
              <column name="name" value="Ankara"></column>

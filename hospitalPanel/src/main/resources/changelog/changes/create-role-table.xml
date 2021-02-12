@@ -7,7 +7,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     
     
-    <changeSet id="10.02.2020-04:00" author="can.okan">
+    <changeSet id="12.02.2020-04:00" author="can.okan">
         <createTable tableName="ROLE_TBL">
             <column autoIncrement="true" name="id" type="int(10)" >
                 <constraints primaryKey="true"></constraints>
@@ -19,7 +19,7 @@
         
     </changeSet>
       
-    <changeSet id="10.02.2020-05:00" author="can.okan">
+    <changeSet id="21.02.2020-05:00" author="can.okan">
         <insert tableName="ROLE_TBL">
              <column name="id" valueNumeric="1"></column>
              <column name="name" value="ROLE_ADMIN"></column>

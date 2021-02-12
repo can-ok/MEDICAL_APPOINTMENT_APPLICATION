@@ -18,17 +18,20 @@
             <column name="policlinicId" type="int(10)">
             	<constraints foreignKeyName="fk_polic_doctor" referencedColumnNames="policlinic(id)"></constraints>
             </column>
-             
+             <column  name="role_id" type="int(10)">
+                <constraints nullable="false" foreignKeyName="fk_role_doctor" references="ROLE_TBL(id)"/>
+            </column> 
         </createTable>
     </changeSet>
     
     
-      <changeSet id="06.02.2020-06" author="can.okan">
+      <changeSet id="22.02.2020 10:06" author="can.okan">
         <insert tableName="doctor">
             <column name="registrationNumber" valueNumeric="11235"></column>
             <column name="name" value="Hakan"></column>
            <column name="surname" value="Mert"></column>
            <column name="policlinicId" valueNumeric="1"/>
+           <column name="role_id" valueNumeric="2"/>
            
         </insert>      
        
@@ -43,6 +46,9 @@
     	</addColumn>
     
     </changeSet>
+    
+     
+    
     
     </databaseChangeLog>
     

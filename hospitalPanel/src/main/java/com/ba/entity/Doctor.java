@@ -38,6 +38,7 @@ public class Doctor {
 	@Column(name="surname")
 	private String surname;
 
+	private String password;
 
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="POLICLINICID")
@@ -47,4 +48,8 @@ public class Doctor {
 	@ManyToOne()
 	@JoinColumn(name="HOSPITALID")
 	private Hospital hospital;
+	
+	@ManyToOne
+	@JoinColumn(name="role_id")
+	private Role role;
 }

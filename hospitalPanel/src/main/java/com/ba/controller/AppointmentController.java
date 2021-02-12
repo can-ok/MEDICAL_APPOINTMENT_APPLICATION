@@ -46,4 +46,9 @@ public class AppointmentController {
 	public List<String> getReserves(@RequestParam(value="date") String date,@RequestParam(value="id") Integer registrationNumber){
 		return appointmentService.getReservedHours(date,registrationNumber);
 	}
+	
+	@GetMapping(path="/doctor")
+	public List<Appointment> getAppointmentsDoctor(@RequestParam(value="id") Integer registrationNumber){
+		return appointmentService.getAllByDoctor(registrationNumber);
+	}
 }
